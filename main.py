@@ -1,7 +1,6 @@
 from time import time
 from io   import BytesIO
 
-#import datetime
 import os 
 import cv2
 import math
@@ -10,9 +9,7 @@ import base64
 import logging
 import random
 
-#img = np.ones((65536,65536,1),np.uint8)
-#img = np.ones((65,65,1),np.uint8)
-#img*=255
+
 x =0
 y =0
 img = np.zeros((131072,131072,1),np.uint8)
@@ -31,6 +28,3 @@ for i in range(0,255):
 					y=y+2
 
 cv2.imwrite("./img.png",img)
-#cv2.imshow('image',img)
-#cv2.waitKey(0)
-#cv2.destroyAllWindows()
