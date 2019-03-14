@@ -25,17 +25,17 @@ for i in range(0,length):
 		for k in range(0,length):
 			for l in range(0,length):
 				print x,y
-				img[x  ][y  ] = i+random.randint(0,200)
-				img[x+1][y  ] = j+random.randint(0,200)
-				img[x  ][y+1] = k+random.randint(0,200)
-				img[x+1][y+1] = l+random.randint(0,200)
+				img[x  ][y  ] = i*(255/length)
+				img[x+1][y  ] = j*(255/length)
+				img[x  ][y+1] = k*(255/length)
+				img[x+1][y+1] = l*(255/length)
 				if x < size_x-2:
 					x=x+2
 				elif y< size_y-2:
 					x=0
 					y=y+2
 
-cv2.imwrite("./img.png",img)
+cv2.imwrite("./img2.png",img)
 #cv2.imshow('image',img)
 #cv2.waitKey(0)
 #cv2.destroyAllWindows()
